@@ -22,6 +22,9 @@ class Task extends Model
         'status',
         'priority',
         'due_date',
+        'project_id',
+        'created_by',
+        'assigned_to'
     ];
 
     /**
@@ -46,13 +49,5 @@ class Task extends Model
     public function createdBy(): BelongsTo
     {
         return $this->belongsTo(User::class, 'created_by');
-    }
-
-    /**
-     * The tags that belong to the task.
-     */
-    public function tags(): BelongsToMany
-    {
-        return $this->belongsToMany(Tag::class, 'task_tag');
     }
 }
