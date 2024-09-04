@@ -29,11 +29,10 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-       // Suggested code may be subject to a license. Learn more: ~LicenseLog:1377930863.
-// Suggested code may be subject to a license. Learn more: ~LicenseLog:823658259.
+        // Validate the request data
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:'.User::class],
+            'email' => ['required', 'string', 'lowercase', 'email', 'max:255', 'unique:' . User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
             'role' => ['required', 'string', 'in:user,admin']
         ]);
