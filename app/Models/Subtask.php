@@ -15,6 +15,7 @@ class Subtask extends Model
         'name',
         'description',
         'status',
+        'task_id'
     ];
 
     // Suggested code may be subject to a license. Learn more: ~LicenseLog:3498196718.

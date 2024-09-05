@@ -9,6 +9,11 @@ use Illuminate\Support\Facades\Redirect;
 
 class TaskController extends Controller
 {
+    public function index()
+    {
+        $tasks = Task::where('created_by', Auth::id())->get();
+        return view('tasks.index', compact('tasks'));
+    }
     /**
      * Show the form for creating a new resource.
      */

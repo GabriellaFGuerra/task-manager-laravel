@@ -83,7 +83,7 @@ class ProjectController extends Controller
 
         $project->update($request->all());
 
-        return Redirect::route('projects.show', ['project' => $project->id])
+        return Redirect::route('project.show', ['project' => $project->id])
             ->with('success', 'Project updated successfully');
     }
 
