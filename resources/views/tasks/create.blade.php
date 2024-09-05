@@ -14,7 +14,7 @@
 
     <div class="p-4 mx-auto max-w-lg rounded-lg shadow-md">
         <h2 class="mb-6 text-2xl font-semibold text-white">Create New Task</h2>
-        <form method="POST" action="{{ route('task.store', $id) }}">
+        <form method="POST" action="{{ route('task.store', $project) }}">
             @csrf
             <!-- Title -->
             <div class="mb-4">

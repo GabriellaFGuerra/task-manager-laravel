@@ -79,7 +79,7 @@ class TaskController extends Controller
 
         $task->update($request->all());
 
-        return Redirect::route('tasks.show', ['task' => $task->id])->with('success', 'Task updated successfully');
+        return Redirect::route('task.show', ['task' => $task->id])->with('success', 'Task updated successfully');
     }
 
     /**
